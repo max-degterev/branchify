@@ -19,3 +19,8 @@ if you want to *dogeify* your branch name, prefix it like this:
 
 (outputs: wowmysuchbranchverynamewow)
 
+alternatively you can *dashify* your branch name:
+
+`branchify dashify my branch name`
+
+(outputs: my-branch-name)
