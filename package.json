@@ -1,11 +1,17 @@
 {
   "name": "branchify",
   "description": "Lets you create unnecessary long branch names from strings and sentences",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "preferGlobal": true,
+  "homepage": "http://maxdegterev.name/",
+  "author": {
+    "name": "Max Degterev",
+    "email": "me@maxdegterev.name",
+    "url": "http://maxdegterev.name/"
+  },
   "repository": {
     "type": "git",
-    "url": "http://github.com/remy/nodemon.git"
+    "url": "git@github.com:suprMax/branchify.git"
   },
   "engines": {
     "node": "0.10.x"
