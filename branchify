@@ -3,6 +3,8 @@
 var args = process.argv.slice(2);
 
 if (args[0] === 'dogeify') {
+  args.shift();
+
   var dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
   var dogeified = [];
 
