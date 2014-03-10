@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+var args = process.argv.slice(2);
+
+if (args[0] === 'dogeify') {
+  var dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
+  var dogeified = [];
+
+  for (var _i = 0; _i < args.length; _i++) {
+    dogeified.push(dogeify[_i]);
+    dogeified.push(args[_i]);
+  }
+
+  dogeified.push('wow');
+  args = dogeified;
+}
+
+var input = args.join(' ');
+var output = input.toLowerCase().replace(/[\s\"\'\-\_\+\/]/g, '');
+
+console.log(output);
