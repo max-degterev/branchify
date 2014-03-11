@@ -20,11 +20,11 @@ if (args[0] === 'dogeify') {
 if (args[0] === 'dashify') {
   args.shift();
   var input = args.join('-');
-  var output = input.toLowerCase().replace(/[\s\"\'\_\+\/]/g, '');
+  var output = input.toLowerCase().replace(/[\s\?\+\/"'_,]/g, '');
 }
 else {
   var input = args.join(' ');
-  var output = input.toLowerCase().replace(/[\s\"\'\-\_\+\/]/g, '');
+  var output = input.toLowerCase().replace(/[\s\?\+\/"'_,\-]/g, '');
 }
 
 console.log(output);
