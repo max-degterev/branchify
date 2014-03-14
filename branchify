@@ -1,12 +1,13 @@
 #!/usr/bin/env node
 
-var args = process.argv.slice(2);
+var args = process.argv.slice(2),
+    input, output, dogeify, dogeified;
 
 if (args[0] === 'dogeify') {
   args.shift();
 
-  var dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
-  var dogeified = [];
+  dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
+  dogeified = [];
 
   for (var _i = 0; _i < args.length; _i++) {
     dogeified.push(dogeify[_i]);
@@ -17,14 +18,7 @@ if (args[0] === 'dogeify') {
   args = dogeified;
 }
 
-if (args[0] === 'dashify') {
-  args.shift();
-  var input = args.join('-');
-  var output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~`±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'_,]/g, '');
-}
-else {
-  var input = args.join(' ');
-  var output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~`±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'_,\-]/g, '');
-}
+input = args.join('-');
+output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~`±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'_,]/g, '');
 
 console.log(output);
