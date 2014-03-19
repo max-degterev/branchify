@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
+var exec = require('child_process').exec;
+
 var args = process.argv.slice(2),
+    create = false,
     input, output, dogeify, dogeified;
 
 if (args[0] === 'dogeify') {
@@ -18,7 +21,17 @@ if (args[0] === 'dogeify') {
   args = dogeified;
 }
 
-input = args.join('-');
-output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~`±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'_,]/g, '');
+if (args[0] === 'create') {
+  create = true;
+  args.shift();
+}
 
-console.log(output);
+input = args.join('-');
+output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'’`_,]/g, '');
+
+if (!create) {
+  console.log(output);
+}
+else {
+  exec('git checkout -b ' + output);
+}
