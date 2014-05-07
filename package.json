@@ -1,7 +1,7 @@
 {
   "name": "branchify",
   "description": "Lets you create unnecessary long branch names from strings and sentences",
-  "version": "0.0.9",
+  "version": "0.1.0",
   "preferGlobal": true,
   "homepage": "http://maxdegterev.name/",
   "author": {

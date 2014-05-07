@@ -12,6 +12,7 @@ if (!!~['--help', '-h'].indexOf(args[0])) {
 }
 
 if (!!~['--dogeify', '-d', '-cd', '-dc'].indexOf(args[0])) {
+  if (!!~['-cd', '-dc'].indexOf(args[0])) create = true;
   args.shift();
 
   dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
@@ -26,7 +27,7 @@ if (!!~['--dogeify', '-d', '-cd', '-dc'].indexOf(args[0])) {
   args = dogeified;
 }
 
-if (!!~['--create', '-c', '-cd', '-dc'].indexOf(args[0])) {
+if (!!~['--create', '-c'].indexOf(args[0])) {
   create = true;
   args.shift();
 }
