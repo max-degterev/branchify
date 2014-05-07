@@ -6,7 +6,12 @@ var args = process.argv.slice(2),
     create = false,
     input, output, dogeify, dogeified;
 
-if (args[0] === 'dogeify') {
+if (!!~['--help', '-h'].indexOf(args[0])) {
+  console.log('Commands:\r\n  --dogeify, -d: dogeify\r\n  --create, -c: create a branch\r\n\r\nExample: branchify -c my awesome branch');
+  return;
+}
+
+if (!!~['--dogeify', '-d', '-cd', '-dc'].indexOf(args[0])) {
   args.shift();
 
   dogeify = ['wow', 'such', 'very', 'much', 'many', 'so', 'amaze', 'do want', 'good'];
@@ -21,7 +26,7 @@ if (args[0] === 'dogeify') {
   args = dogeified;
 }
 
-if (args[0] === 'create') {
+if (!!~['--create', '-c', '-cd', '-dc'].indexOf(args[0])) {
   create = true;
   args.shift();
 }
