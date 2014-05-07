@@ -15,6 +15,6 @@ Lets you create unnecessary long branch names from strings and sentences
 
 if you want to *dogeify* your branch name, prefix it like this:
 
-`branchify dogeify my branch name`
+`branchify --dogeify my branch name`
 
 (outputs: wow-my-such-branch-very-name-wow)

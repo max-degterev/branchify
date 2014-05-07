@@ -7,7 +7,11 @@ var args = process.argv.slice(2),
     input, output, dogeify, dogeified;
 
 if (!!~['--help', '-h'].indexOf(args[0])) {
-  console.log('Commands:\r\n  --dogeify, -d: dogeify\r\n  --create, -c: create a branch\r\n\r\nExample: branchify -c my awesome branch');
+  console.log(
+    'Commands:\r\n  --dogeify, -d: dogeify\r\n  --create, -c: ' +
+    'create a branch (also aliased as -b to be able to create shell `alias gco=branchify`)' +
+    '\r\n\r\nExample: branchify -c my awesome branch'
+  );
   return;
 }
 
@@ -27,7 +31,7 @@ if (!!~['--dogeify', '-d', '-cd', '-dc'].indexOf(args[0])) {
   args = dogeified;
 }
 
-if (!!~['--create', '-c'].indexOf(args[0])) {
+if (!!~['--create', '-c', '-b'].indexOf(args[0])) {
   create = true;
   args.shift();
 }
