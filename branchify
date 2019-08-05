@@ -37,7 +37,7 @@ if (!!~['--create', '-c', '-b'].indexOf(args[0])) {
 }
 
 input = args.join('-');
-output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'’`_,]/g, '');
+output = input.toLowerCase().replace(/[\s\?\+\/\\\.\[\]\{\}~±§!@#$%^&*()=⁄€‹›ﬁ‡°·¡™£¢∞¶•ªº–≠«»÷<>≤≥¿;:|"'’`„“_,]/g, '');
 
 if (!create) {
   console.log(output);
